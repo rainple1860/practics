@@ -18,6 +18,10 @@ public class DirectInsertSort extends AbsSort {
         super(size, check);
     }
 
+    public DirectInsertSort(int size, boolean check, int times) {
+        super(size, check, times);
+    }
+
     @Override
     protected void sort(int[] data) {
         int len = data.length;

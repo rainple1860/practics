@@ -14,6 +14,14 @@ public class BubbleSort extends AbsSort {
         super(size);
     }
 
+    public BubbleSort(int size, boolean check) {
+        super(size, check);
+    }
+
+    public BubbleSort(int size, boolean check, int times) {
+        super(size, check, times);
+    }
+
     @Override
     protected void sort(int[] data) {
         int len = data.length;

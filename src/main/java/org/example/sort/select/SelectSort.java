@@ -1,4 +1,4 @@
-package org.example.sort.exchange;
+package org.example.sort.select;
 
 import org.example.sort.AbsSort;
 

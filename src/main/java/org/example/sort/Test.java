@@ -1,8 +1,8 @@
 package org.example.sort;
 
-import org.example.sort.exchange.HeapSort;
 import org.example.sort.exchange.QuickSort;
 import org.example.sort.insert.ShellSort;
+import org.example.sort.select.HeapSort;
 
 /**
  * @className: Test
@@ -14,8 +14,8 @@ public class Test {
 
     public static void main(String[] args) {
         int size = 1000000;
-        int times = 20;
-        Sortable sortable = new ShellSort(size,false,times);
+        int times = 10;
+        Sortable sortable = new RadixSort(size,false,times);
         sortable.printData(false);
         sortable.sort();
 
@@ -24,6 +24,14 @@ public class Test {
         sortable.sort();
 
         sortable = new HeapSort(size,false,times);
+        sortable.printData(false);
+        sortable.sort();
+
+        sortable = new MergeSort(size,false,times);
+        sortable.printData(false);
+        sortable.sort();
+
+        sortable = new ShellSort(size,false,times);
         sortable.printData(false);
         sortable.sort();
     }
