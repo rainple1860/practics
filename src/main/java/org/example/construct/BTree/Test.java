@@ -1,4 +1,4 @@
-package org.example.BTree;
+package org.example.construct.BTree;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -20,9 +20,20 @@ import java.io.IOException;
 public class Test {
 
     public static void main(String[] args) throws IOException {
-        HuffmanTree huffmanTree = new HuffmanTree();
-        huffmanTree.zip("D:\\2022考研\\数二\\考研数学张宇数学题源探析经典1000题（数学二  解析分册）.zip",
-                "D:\\2022考研\\数二\\考研数学张宇数学题源探析经典1000题（数学二  解析分册）.pdf");
+        Tree<Integer> tree = new Tree<>();
+        tree.add(100);
+        tree.add(96);
+        tree.add(180);
+        tree.add(50);
+        tree.add(98);
+        tree.add(30);
+        tree.add(60);
+        tree.add(55);
+        tree.add(40);
+        tree.add(150);
+        tree.add(250);
+        tree.add(300);
+        tree.print(40);
     }
 
     private static void translate() throws IOException {

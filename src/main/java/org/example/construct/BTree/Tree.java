@@ -1,4 +1,4 @@
-package org.example.BTree;
+package org.example.construct.BTree;
 
 import java.util.*;
 
@@ -43,6 +43,30 @@ public class Tree<T extends Comparable<T>> {
 
     public int size() {
         return size;
+    }
+
+    public void print(T target) {
+        print(root,target);
+    }
+
+
+    private Node<T> print(Node<T> node,T target) {
+        if (node != null) {
+            if (target.equals(node.data)) {
+                return node;
+            }
+            Node<T> n = print(node.left, target);
+            if (n != null) {
+                System.out.println("当前节点：" + node.data);
+                return n;
+            }
+            n = print(node.right, target);
+            if (n != null) {
+                System.out.println("当前节点：" + node.data);
+                return n;
+            }
+        }
+        return null;
     }
 
     //非递归中序遍历
@@ -192,6 +216,13 @@ public class Tree<T extends Comparable<T>> {
             this.data = data;
             this.left = left;
             this.right = right;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "data=" + data +
+                    '}';
         }
     }
 
